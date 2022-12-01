@@ -42,7 +42,10 @@ In case the Elves get hungry and need extra snacks, they need to know which Elf 
 
 Find the Elf carrying the most Calories. How many total Calories is that Elf carrying?
 
-### Solution 
+### Solution first part
 We use a list to store the elves calories and a counter. The counter will be increased when only a break line is found, otherwise we sum the value of the line to the current elf. At the same time, in the same loop (to be more efficient O(n) where n is the number of total items carried by the elves) we compute the maximum. We can do so as, when each elf line ends, we can check if the current maximum is not bigger than the current one.
 
 EDIT: I was storing the values in a list (vector in c++) but it is not necessary! As the only two values compared are the current elf and the maximum value, therefore we only need to store those two values.
+
+### Solution second part
+Now we need to store at least 3 values, we change this and the if conditions as well. We compute the list of calories carried by eaf elf and sort the list. We only need now to print the last element and the sum of the last three elements.
